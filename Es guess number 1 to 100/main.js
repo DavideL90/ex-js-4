@@ -38,7 +38,7 @@ do {
     number_guess = parseInt(number_guess);
   }
   //Controllo che il numero non sia già stato inserito;
-  if((used_numbers.includes(number_guess)) || (count_attempts != 0)){
+  if(used_numbers.includes(number_guess)){
     number_guess = prompt("Inserisci un nuovo numero, il precedente risulta già utilizzato");
     number_guess = parseInt(number_guess);
   }
