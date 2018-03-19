@@ -19,14 +19,11 @@ switch(difficulty){
     }
     break;
 }
-debugger;
-console.log(difficulty);
 console.log(bomb_Number);
 //Creo un ciclo per far sì che l'utente possa indovinare i numeri;
 number_found = false; //variabile che indica se l'utente "becca" un numero vietato;
 count_attempts = 0; //Conto i tentativi fatti dall'utente;
 used_numbers = []; //Creo un array affinché l'utente non riusi un numero.
-console.log(used_numbers);
 do {
   if(difficulty == 0){
     var number_guess = prompt("Inserisci un numero da 1 a 100:"); //Numero inserito dall'utente;
@@ -48,11 +45,9 @@ do {
   else{
     used_numbers.push(number_guess);
   }
-  console.log(used_numbers);
-  console.log(number_guess);
+  //controllo se il numero è tra i numeri vietati
   if(bomb_Number.includes(number_guess)){
     number_found = true;
-    console.log(number_found);
   }
   count_attempts++;
 } while(number_found == false);
